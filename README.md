@@ -186,3 +186,18 @@ Temperature arithmetic is disabled because:
 | feature/UC14 | Temperature with selective arithmetic |
 
 ---
+
+### 🧠 Core Concepts Implemented
+
+- Generics
+- Functional Interfaces
+- Lambda Expressions
+- Enum Polymorphism
+- Default Interface Methods
+- Interface Segregation Principle (ISP)
+- SOLID Principles
+- Capability-Based Design
+- Non-linear Conversions
+- Epsilon-based Floating Point Comparison
+
+---
