@@ -201,3 +201,108 @@ Temperature arithmetic is disabled because:
 - Epsilon-based Floating Point Comparison
 
 ---
+
+
+
+### 📌 Example Output
+
+Equality: `true`         
+Convert 100C to F: Quantity{212.0 FAHRENHEIT}          
+Temperature does not support ADD operation.
+
+---
+
+### 🧪Testing Strategy
+
+JUnit 5 coverage includes:
+
+- Same-unit equality
+- Cross-unit equality
+- Conversion accuracy
+- Round-trip conversion
+- Symmetric & reflexive properties
+- Unsupported operation validation
+- Cross-category prevention
+- Division-by-zero handling
+- Null validation
+- Precision tolerance (epsilon)
+
+---
+
+### 🔐Type Safety
+
+Compile-time:
+`Quantity<TemperatureUnit> ≠ Quantity<LengthUnit>`
+
+
+Runtime:
+`equals()` checks `unit.getClass()`
+
+Cross-category comparisons return false.
+
+---
+
+### 📏 Floating-Point Precision
+
+- private static final double EPSILON = 0.01;
+
+Prevents precision-related equality errors.
+
+---
+
+### 🏛 Design Principles
+
+#### ▶️ Single Responsibility
+Each enum handles only conversion logic.
+
+#### ▶️ Open/Closed Principle
+New categories can be added without modifying core logic.
+
+#### ▶️ Interface Segregation
+Optional arithmetic via default methods.
+
+#### ▶️ Liskov Substitution
+All measurable units behave consistently for conversion.
+
+#### ▶️ Dependency Inversion
+`Quantity` depends on `IMeasurable`, not concrete enums.
+
+---
+
+### 🔮 Future Enhancements
+
+- Compile-time arithmetic restriction
+- Temperature difference modeling
+- REST API integration
+- Spring Boot wrapper
+- Persistence layer
+- Additional measurement categories
+
+---
+
+### ⚙ How to Run
+
+#### 1️⃣ Clone Repository
+
+```
+git clone <repository-url>
+```
+
+
+#### 2️⃣ Switch Branch
+
+```
+git checkout feature/UC3-GenericQuantityClassForDRYPrinciple
+```
+
+#### 3️⃣ Run Tests
+
+```
+mvn clean test
+```
+
+#### 4️⃣ Run Application
+
+Run `QuantityMeasurementApp.java` from IDE.
+
+---
