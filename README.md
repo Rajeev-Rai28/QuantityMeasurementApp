@@ -59,3 +59,60 @@ quantity-measurement-app/
 ```
 
 ---
+
+## 🌿 Branch Structure
+
+The project follows incremental development across branches:
+
+### 🚀 Features Overview (UC1 – UC14)
+
+#### 🔹 UC1 – Equality for Same Unit
+- Compare same-unit quantities.
+
+#### 🔹 UC2 – Null Handling
+- Null unit validation.
+- equals(null) handling.
+
+#### 🔹 UC3 – Different Value Inequality
+- Detect unequal quantities.
+
+#### 🔹 UC4 – Cross Unit Comparison (Length)
+- Feet ↔ Inch comparison.
+- Base unit conversion introduced.
+
+#### 🔹 UC5 – Additional Length Units
+- Yard, Centimeter support.
+- Scalable enum design.
+
+#### 🔹 UC6 – Weight Measurement
+- Gram, Kilogram support.
+- Cross-category restriction.
+
+#### 🔹 UC7 – Volume Measurement
+- Liter, Milliliter, Gallon.
+- Generic isolation via `<U extends IMeasurable>`.
+
+#### 🔹 UC8 – Addition Operation
+- Add compatible quantities.
+- Base-unit arithmetic logic.
+
+#### 🔹 UC9 – Subtraction Operation
+- Subtract quantities.
+- Precision rounding.
+
+#### 🔹 UC10 – Division Operation
+- Division with zero validation.
+
+#### 🔹 UC11 – Volume Arithmetic Support
+- Extended arithmetic support for volume.
+
+#### 🔹 UC12 – Centralized Arithmetic Enum
+- Introduced `ArithmeticOperation`.
+- Used `DoubleBinaryOperator`.
+- Removed duplication.
+
+#### 🔹 UC13 – Arithmetic Refactoring
+- Unified `performArithmetic()` method.
+- Clean reusable design.
+
+#### 🔹 UC14 – Temperature Measurement (Selective Arithmetic)
