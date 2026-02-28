@@ -116,3 +116,73 @@ The project follows incremental development across branches:
 - Clean reusable design.
 
 #### 🔹 UC14 – Temperature Measurement (Selective Arithmetic)
+
+#### ✔ Added Units
+- CELSIUS
+- FAHRENHEIT
+- KELVIN
+
+#### ✔ Supported
+- Equality
+- Conversion
+
+#### ❌ Unsupported
+- Addition
+- Subtraction
+- Division
+
+Temperature arithmetic is disabled because:
+100°C + 50°C ≠ meaningful result
+100°C ÷ 50°C = meaningless ratio
+
+#### Uses:
+`validateOperationSupport()`
+
+#### Throws:
+`UnsupportedOperationException`
+
+---
+
+### 🌡 Temperature Conversion Formulas
+
+#### Celsius → Fahrenheit
+`°F = (°C × 9/5) + 32`
+
+### Fahrenheit → Celsius
+`°C = (°F − 32) × 5/9`
+
+### Kelvin → Celsius
+`°C = K − 273.15`
+
+---
+
+## 🌿 Branch Strategy
+
+### `main`
+- Stable production-ready branch
+- Contains UC1 – UC14
+
+### `dev`
+- Integration branch
+- All feature branches merged before main
+
+### Feature Branches🌿
+
+| Branch | Description |
+|--------|------------|
+| feature/UC1 | Basic equality |
+| feature/UC2 | Null validation |
+| feature/UC3 | Inequality logic |
+| feature/UC4 | Length conversion |
+| feature/UC5 | Additional length units |
+| feature/UC6 | Weight measurement |
+| feature/UC7 | Volume measurement |
+| feature/UC8 | Addition support |
+| feature/UC9 | Subtraction support |
+| feature/UC10 | Division support |
+| feature/UC11 | Volume arithmetic |
+| feature/UC12 | Arithmetic enum refactor |
+| feature/UC13 | Centralized arithmetic logic |
+| feature/UC14 | Temperature with selective arithmetic |
+
+---
