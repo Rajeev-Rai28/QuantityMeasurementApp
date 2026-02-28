@@ -20,3 +20,15 @@ It contains:
 - Comprehensive test coverage
 
 ---
+
+### 🎯 Project Objective
+
+To build a scalable and extensible **Quantity Measurement System** that:
+
+- Supports multiple measurement types  
+- Allows unit conversions  
+- Enables arithmetic operations  
+- Maintains strict type safety  
+- Ensures domain correctness through test-driven development  
+
+---
